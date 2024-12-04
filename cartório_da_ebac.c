@@ -56,12 +56,34 @@ int registro()
 	file = fopen(arquivo, "a");
 	fprintf(file,cargo);
 	fclose(file);
-
-
-
 	
+
+	int opcao=0;
 	
+	system("cls");
 	
+	printf("\nNome registrado dcom sucesso!\n\n");
+	printf("\n\t1 - Voltar para registrar nomes\n\n");
+	printf("\n\t2 - Voltar para o menu\n");
+	
+	scanf("%d", &opcao);
+	system("cls");
+ 	
+	switch(opcao)
+	{
+		case 1:
+		registro();		
+						
+		break;
+	
+		case 2:
+		return 0;
+		system("cls");
+		
+		break;		
+	}
+
+		
 	system("pause");
 		
 }
@@ -144,6 +166,7 @@ int main()
 		printf("\t1 - registrar nomes\n\n");
 		printf("\t2 - consultar nomes\n\n");
 		printf("\t3 - deletar  nomes\n\n");
+		printf("\t4 - sair do site\n\n");
 		printf("opção: ");
 	
 		scanf("%d", &opcao);
@@ -164,6 +187,12 @@ int main()
 			
 			case 3:
 			deletar();							
+			break;
+			
+			case 4:
+			printf("\nobrigado por utilizar o site\n\n");
+			return 0;
+								
 			break;
 			
 
